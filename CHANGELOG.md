@@ -1,5 +1,17 @@
 # Changelogs
 
+## 1.0.1 - TBD
+
+* Added new unified widget `MarkdownLiveEditor` that replaces functionality of `MarkdownAutoPreview`, `MarkdownField`, and `SplittedMarkdownFormField`
+* `MarkdownLiveEditor` features:
+  - Shows raw markdown when focused (editing mode)
+  - Shows rendered markdown when unfocused (preview mode)
+  - Supports all markdown features with integrated toolbar
+  - Includes form field capabilities (validator, onSaved, autovalidateMode)
+  - Keyboard shortcuts support (Ctrl+B, Ctrl+I)
+* Updated example app to demonstrate new widget
+* Updated README with usage examples
+
 ## 0.2.15 - 19-June-2024
 
 * Adds hint text param in MarkdownAutoPreview widget to show hint text when content is not available, [PR#2](https://github.com/OmkarDabade/markdown_editor_plus/pull/2)

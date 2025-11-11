@@ -13,6 +13,7 @@ Advanced markdown editor library For flutter.
 - ✅ Convert to unorder list and checkbox list
 - ✅ Support multiline convert
 - ✅ Support auto convert emoji
+- ✅ **NEW**: Unified editor with live preview (MarkdownLiveEditor)
 
 ## Usage
 
@@ -38,6 +39,32 @@ Initialize controller and focus node. These controllers and focus nodes are opti
 ```dart
 TextEditingController _controller = TextEditingController();
 ```
+
+### NEW: MarkdownLiveEditor - Unified Editor with Live Preview
+
+A new unified widget that replaces the functionality of `MarkdownAutoPreview`, `MarkdownField`, and `SplittedMarkdownFormField`:
+
+```dart
+// Unified editor with live preview
+// Click to edit (shows raw markdown), click outside to preview (shows rendered markdown)
+MarkdownLiveEditor(
+    controller: _controller,
+    emojiConvert: true,
+    decoration: InputDecoration(
+        hintText: 'Type markdown here...',
+        border: OutlineInputBorder(),
+    ),
+)
+```
+
+Features:
+- When focused: shows editable raw markdown text with toolbar
+- When unfocused: displays fully rendered markdown preview
+- Supports all markdown features (headers, lists, emphasis, code, links, tables, etc.)
+- Includes toolbar, emoji conversion, and form field capabilities
+- Keyboard shortcuts (Ctrl+B for bold, Ctrl+I for italic)
+
+### Original Widgets
 
 Show widget for editor
 
