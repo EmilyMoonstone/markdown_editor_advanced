@@ -29,28 +29,67 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Screen"),
+        title: const Text("Markdown Editor Advanced Demo"),
       ),
-      body: const Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          MarkdownAutoPreview(
-            decoration: InputDecoration(
-              hintText: 'Markdown Auto Preview',
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'New: Markdown Live Editor',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            emojiConvert: true,
-            // maxLines: 10,
-            // minLines: 1,
-            // expands: true,
-          ),
-          SplittedMarkdownFormField(
-            markdownSyntax: '## Headline',
-            decoration: InputDecoration(
-              hintText: 'Splitted Markdown FormField',
+            const SizedBox(height: 8),
+            const Text(
+              'Unified widget that replaces the three widgets below. '
+              'Click to edit (shows raw markdown), click outside to preview (shows rendered markdown).',
+              style: TextStyle(fontSize: 12, color: Colors.grey),
             ),
-            emojiConvert: true,
-          ),
-        ],
+            const SizedBox(height: 12),
+            const MarkdownLiveEditor(
+              decoration: InputDecoration(
+                hintText: 'Type markdown here...',
+                border: OutlineInputBorder(),
+              ),
+              emojiConvert: true,
+              minLines: 3,
+              maxLines: 10,
+            ),
+            const SizedBox(height: 32),
+            const Divider(),
+            const SizedBox(height: 16),
+            const Text(
+              'Original Widgets:',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'Markdown Auto Preview',
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 8),
+            const MarkdownAutoPreview(
+              decoration: InputDecoration(
+                hintText: 'Markdown Auto Preview',
+              ),
+              emojiConvert: true,
+            ),
+            const SizedBox(height: 24),
+            const Text(
+              'Splitted Markdown FormField',
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 8),
+            const SplittedMarkdownFormField(
+              markdownSyntax: '## Headline',
+              decoration: InputDecoration(
+                hintText: 'Splitted Markdown FormField',
+              ),
+              emojiConvert: true,
+            ),
+          ],
+        ),
       ),
     );
   }
