@@ -1,10 +1,9 @@
 # Markdown Editor Plus
 
-This is a fork of [simple_markdown_editor by zahnia88](https://github.com/zahniar88/simple_markdown_editor)
-with contributions from [fossfreaks](https://github.com/fossfreaks)
+This is a fork of [markdown_editor_plus by OmkarDabade](https://github.com/OmkarDabade/markdown_editor_plus)
+with contributions from [zahnia88](https://github.com/zahniar88) and [fossfreaks](https://github.com/fossfreaks)
 
-Simple markdown editor library For flutter. 
-For demo video, you can see it at this url [Demo](https://youtu.be/aYBeXXDoNPo)
+Advanced markdown editor library For flutter.
 
 
 ## Features
@@ -21,7 +20,7 @@ Add dependencies to your `pubspec.yaml`
 
 ```yaml
 dependencies:
-    markdown_editor_plus: ^latest
+    markdown_editor_advanced: ^latest
 ```
 
 Run `flutter pub get` to install.
@@ -31,7 +30,7 @@ Run `flutter pub get` to install.
 Import library
 
 ```dart
-import 'package:markdown_editor_plus/markdown_editor_plus.dart';
+import 'package:markdown_editor_advanced/markdown_editor_advanced.dart';
 ```
 
 Initialize controller and focus node. These controllers and focus nodes are optional because if you don't create them, the editor will create them themselves

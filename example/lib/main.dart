@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:markdown_editor_plus/markdown_editor_plus.dart';
+import 'package:markdown_editor_advanced/markdown_editor_advanced.dart';
 
 void main() {
   runApp(const MyApp());

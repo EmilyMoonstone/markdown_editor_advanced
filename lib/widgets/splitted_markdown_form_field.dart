@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:markdown_editor_plus/src/toolbar.dart';
-import '../src/constants.dart';
-import '../src/emoji_input_formatter.dart';
-import 'markdown_toolbar.dart';
+import 'package:markdown_editor_advanced/src/constants.dart';
+import 'package:markdown_editor_advanced/src/emoji_input_formatter.dart';
+import 'package:markdown_editor_advanced/src/toolbar.dart';
+import 'package:markdown_editor_advanced/widgets/markdown_toolbar.dart';
 
 class SplittedMarkdownFormField extends StatefulWidget {
   const SplittedMarkdownFormField({

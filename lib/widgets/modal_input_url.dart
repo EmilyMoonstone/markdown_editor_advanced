@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:markdown_editor_plus/src/toolbar.dart';
+import 'package:markdown_editor_advanced/src/toolbar.dart';
 
 class ModalInputUrl extends StatelessWidget {
   const ModalInputUrl({

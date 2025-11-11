@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  markdown_editor_plus:
+  markdown_editor_advanced:
     path: ../
 
 dev_dependencies:
