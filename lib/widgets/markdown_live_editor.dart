@@ -291,9 +291,20 @@ class _MarkdownLiveEditorState extends State<MarkdownLiveEditor> {
 
   Widget _buildPreviewMode() {
     return GestureDetector(
+      behavior: HitTestBehavior.translucent,
       onTap: () {
-        _internalFocusNode.requestFocus();
-        widget.onTap?.call();
+        // Set focused state first
+        setState(() {
+          _isFocused = true;
+        });
+        
+        // Then request focus after widget is rebuilt
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) {
+            _internalFocusNode.requestFocus();
+            widget.onTap?.call();
+          }
+        });
       },
       child: Container(
         constraints: widget.minLines != null
